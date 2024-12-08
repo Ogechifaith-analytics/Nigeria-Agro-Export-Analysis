@@ -1,0 +1,21 @@
+ -- join table
+ select ex.companyid, ex.exportcountry,ex.date,
+ cn.companyname,cn.companyid
+ from  companies cn
+  join 
+ exports_basic ex
+on ex.companyid = cn.companyid;
+
+select ed.exportid,p.productname as Product,ed.unitssold,ed.unit_price,
+ed.profit_per_unit,ed.exportvalue,ed.destination_port,
+ex.date,cn.companyname,ex.exportcountry
+from exports_detailed ed
+right join 
+exports_basic ex
+on ed.exportid =ex.exportid
+join 
+companies cn
+on ex.companyid = cn.companyid
+join 
+products p
+on p.productid= ex.productid;
