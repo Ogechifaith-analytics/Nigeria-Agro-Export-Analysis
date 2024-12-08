@@ -1,0 +1,51 @@
+use agro_export;
+-- Cleaning data
+select * from exports_basic;
+SET SQL_SAFE_UPDATES = 0;
+-- Remove whitespaces
+UPDATE exports_basic
+ SET Exportcountry = TRIM(Exportcountry);
+ -- convert to proper date format
+ DESCRIBE exports_basic;
+ select * from exports_basic
+ where str_to_date(DATE,'%M-%D-%Y') IS NULL;
+ select str_to_date('11/16/2023','%M-%D-%Y');
+ 
+ ALTER TABLE exports_basic
+ MODIFY DATE DATE;
+ SELECT DATE FROM EXPORTS_BASIC;
+ 
+ -- align using Trim function
+ SELECT * FROM Companies;
+ UPDATE companies
+ SET companyname = TRIM(companyname);
+ 
+ SELECT * FROM Products;
+ UPDATE products
+ SET productname = TRIM(productname);
+ 
+ -- replace spelling errors
+ SELECT * FROM exports_detailed;
+SELECT REPLACE(Destination_Port,'Lagoos','Lagos')
+from exports_detailed;
+SELECT REPLACE(Destination_Port,'pot harcourt','port Harcourt')
+from exports_detailed;
+ SELECT REPLACE(Destination_Port,'Cabalar','Calabar')
+from exports_detailed;
+SELECT * from products;
+ UPDATE products
+ SET productname = TRIM(productname);
+ 
+ -- REPLACE where companyname column is null
+  update companies
+  set companyname = ' '
+  where companyname is NULL;
+ 
+ -- remove where exportid is null
+select * from exports_detailed;
+DELETE FROM exports_detailed 
+where exportid IS NULL;
+
+select COUNT(*) AS NULL_COUNT
+FROM exports_detailed
+WHERE EXPORTID IS NULL;
