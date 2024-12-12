@@ -1,7 +1,8 @@
 # Nigeria-Agro-Export-Analysis
 This project is focused on managing and analyzing data related to Nigeria's agro export industry withiin 2020 to 2023. It leverages SQL for data cleaning, table joins, and advanced queries, Power BI for interactive data visualizations, and Git for version control and collaboration. The system tracks exporting companies, exported products,product trends, export destinations, and key performance metrics, providing insights to enhance decision-making and improve the efficiency of Nigeria's agro export operations.
 
-![agroexport-removebg-preview](https://github.com/user-attachments/assets/c382fbb6-36d5-4590-a526-a34b1d503cf9)   ![nig agro](https://github.com/user-attachments/assets/e134af53-b658-460e-bc2a-b374be31e7c1)
+  ![nig agro](https://github.com/user-attachments/assets/e134af53-b658-460e-bc2a-b374be31e7c1)   
+![agroexport-removebg-preview](https://github.com/user-attachments/assets/c382fbb6-36d5-4590-a526-a34b1d503cf9) 
 
 ## Key Features
 **Company Database**: Manage comprehensive details of Nigerian companies involved in agro exports.
